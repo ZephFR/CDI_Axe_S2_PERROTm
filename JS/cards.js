@@ -51,19 +51,21 @@ function PartageForm() {
 function EnvoiCarte() {
     var email = document.getElementById('email').value;
     var numero = document.getElementById('numero').value;
-
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     
     if (email === '' || numero === '') {
         alert('Veuillez remplir tous les champs');
         return false;
-    }
-
-    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
+    } else if (!emailRegex.test(email)) {
         alert('Veuillez entrer une adresse email valide');
         return false;
     }
+    else {
+        alert("Votre carte est bien envoyée à ce destinataire.");
+        return true;
+    }
 
-    alert("Votre carte est bien envoyée à ce destinataire.");
-    return true;    
+        
 }
+
+document.getElementById("UserID").innerHTML = `<h4> Votre ID : ${localStorage.getItem("UserID")}</h4>`;

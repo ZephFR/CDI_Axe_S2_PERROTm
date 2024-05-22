@@ -36,9 +36,12 @@ function SignUpValidation() {
     var password = document.getElementById('password').value;
     var confirmPassword = document.getElementById('confirmPassword').value;
 
+    var emailArray = JSON.parse(localStorage.getItem("email") + 1);
+
     localStorage.setItem("email", email);
     localStorage.setItem("username", username);
-    localStorage.setItem("password", password)
+    localStorage.setItem("password", password);
+    localStorage.setItem("UserID", emailArray);
 
     if (email === '' || username === '' || password === '' || confirmPassword === '') {
         alert('Veuillez remplir tous les champs');

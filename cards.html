@@ -10,7 +10,6 @@
     <header>
         <div class="tabs">
             <h1> Votre Inventaire de cartes</h1>
-            <button class="tablinks" onclick="location.href = 'account.html'">Inventaire</button>
         </div>
     </header>
     <content>
@@ -23,6 +22,7 @@
                     <label for="email">Email du destinataire :</label>
                     <input type="email" id="email" required>
                 </div>
+                <div id="UserID"> </div>
                 <div>
                     <label for="numero">ID de la carte à envoyer :</label>
                     <input type="number" id="numero" name="numero" min="1" max="30">
@@ -37,6 +37,8 @@
     <footer>
         <div class="tabs">
             <button id="SignUp" class="tablinks" onclick="PartageForm()">Partage de cartes</button>
+            <h6> | </h6>
+            <button class="tablinks" onclick="location.href = 'account.html'">Votre Compte</button>
         </div>
     </footer>
     <script src="JS/cards.js" defer></script>
